@@ -1,0 +1,97 @@
+{
+	"harvestTags": {
+			"prefix": "dat-tags",
+			"scope": "markdown",
+			"body": [
+				"<!--BEGIN ${1|exercises,slides,readings,guides,exam-prep,exercises_guidelines|} ##-->", 
+				"${TM_SELECTED_TEXT}",
+				"<!--END ${1|exercises,slides,readings,guides,exam-prep,exercises_guidelines|} ##-->"
+			],
+			"description": "Block to harvest exercise links"
+	},
+	"Link": {
+		"prefix": "dat-lnk",
+		"scope" : "markdown",
+		"body": "${1|:book:,:tv:,''|} [${2:text} (${3:time} min.)](${4:link})",
+		"description": "Link for readings"
+	},
+	"day template": {
+			"prefix": "dat-day",
+			"scope": "markdown",
+			"body": [
+				"---",
+        "title: '${1:title}'",
+				"date : '${2:day}-${3:month}-${CURRENT_YEAR}'",
+				"pageintro: | ",
+        "    ${5:pageintro}",
+				"---",
+				"",
+				"<!-- Add Learning Goals for this lecture (not yet implemented) -->",
+				"<!-- Is this a better place for leaning goals, compared to the external Google Sheet? -->",
+				"",
+        "### Before this lesson you should:",
+				"<!-- Add readings/videos/tasks for this lecture -->",
+				"### Exercises:",
+				"<!-- Add exercises for this lecture -->",
+				"### Slides:",
+				"<!-- Add Slides for this lecture -->",
+			],
+			"description": "Template for a day info page"
+	},
+	"sp template": {
+		"prefix": "dat-sp-ex",
+		"scope": "markdown",
+		"body": [
+			"---",
+			"title: '${1:title}'",
+			"date : 'SP${2:sp-number} (${3:day}-${4:month}-${CURRENT_YEAR})'",
+			"isSP: true",
+			"---",
+			"<!-- REMOVE ME: Setting isSP ensures this pages gets added to the list of Studypoint exercises -->",
+			"",
+			"## Part-1 Complete all exercises (according to your colour level) from this week",
+			"",
+			"<!-- REMOVE ME: The tag below will insert all day-exercises given for this week -->",
+			"<!-- REMOVE ME: PeriodFolder and weekFolder MUST match the real folder names -->",
+			"",
+			"<!--PeriodExercises ${5:periodFolder}/${6:weekFolder} PeriodExercises--> ",
+			"",
+			"## Part-2 XXXXX",
+		],
+		"description": "Template for a day info page"
+},
+	"index week template": {
+		"prefix": "dat-index-wk",
+		"scope": "markdown",
+		"body": [
+			"---",
+			"shortTitle: 'Week${1:weekInPeriod} (${2:shortText})'",
+			"title : '${3:title}'",
+			"---",
+			"<!-- REMOVE ME: Below here you can use normal markdown -->",
+			"",
+			"## TODO: Longer title for this whole week",
+			"",
+			"### Business competences",
+			"TBD ",
+			"",
+			"<!-- You can add links/references/etc below, which are valid for the full week -->",
+			"<!--### Valuable Extra Material for this week -->",
+		],
+		"description": "Template for a week index.md"
+},
+"index PERIOD template": {
+	"prefix": "dat-index-period",
+	"scope": "markdown",
+	"body": [
+		"---",
+		"shortTitle: 'Flow${1:flowNumber}'",
+		"title : '${2:title}'",
+		"---",
+		"<!-- REMOVE ME: Below here you can use normal markdown -->",
+		"",
+		"Add some details about this flow here",
+	],
+	"description": "Template for a Period index.md"
+}
+}
