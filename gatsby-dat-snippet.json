@@ -3,9 +3,9 @@
 			"prefix": "dat-tags",
 			"scope": "markdown",
 			"body": [
-				"<!--BEGIN ${1|exercises,slides,readings,guides,exam-prep,exercises_guidelines|} ##-->", 
+				"<!--BEGIN ${1|exercises,slides,readings,guides,exam-prep,exercises_guides|} ##-->", 
 				"${TM_SELECTED_TEXT}",
-				"<!--END ${1|exercises,slides,readings,guides,exam-prep,exercises_guidelines|} ##-->"
+				"<!--END ${1|exercises,slides,readings,guides,exam-prep,exercises_guides|} ##-->"
 			],
 			"description": "Block to harvest exercise links"
 	},
