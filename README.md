@@ -1,0 +1,1 @@
+# gatsby_dat_vscode_snippets
